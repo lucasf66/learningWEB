@@ -10,6 +10,7 @@
   --header-heigth: 4.5rem;
   font-size: 100%; /*16px*/
   --hue: 159;
+  --colorfont-body: hsla(0, 0%, 46%, 1);
   --color-title: hsl(var(--hue), 41%, 10%);
   --color-primary: hsl(var(--hue), 36%, 57%);
   --color-second: hsl(var(--hue), 365%, 88%);
@@ -26,34 +27,34 @@ a {
 
 body {
   background-color: var(--background1);
+  font: 400 1rem 'DM Sans', sans-serif;
+}
+section {
+  padding: 5rem 0;
 }
 /*--- HEADER ---*/
 .logo {
   color: var(--color-title);
-  font: 700 1.3125rem 'Poppins', sans-serif;
+  font: 700 1.3rem 'Poppins', sans-serif;
 }
 .logo span {
   color: var(--color-primary);
 }
-header {
-  /*border-bottom: 1px solid #e4e4e4;*/
-  display: flex;
-  height: var(--header-heigth);
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+#initial_header {
+  border-bottom: 1px solid #e4e4e4;
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 100;
   background-color: var(--body-color);
   width: 100%;
 }
 
 nav {
+  height: 4.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   display: flex;
-  align-items: center;
+  align-items: center; /*pra usar o center terá que definir altura do propio box */
   justify-content: space-between;
-  width: 100%;
 }
 
 /*header {
@@ -75,6 +76,12 @@ nav {
 } */
 
 /*--- HOME --- */
+#home h1 {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: hsla(0, 0%, 0%, 1);
+  display: flex;
+  justify-content: center;
+}
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -82,11 +89,13 @@ nav {
 img {
   width: 100%;
   height: auto;
+  /*Faz com que se adapte a tela */
+}
+p {
+  color: var(--colorfont-body);
 }
 
 #Home {
-  margin-top: 2rem;
-  position: relative;
 }
 main {
   margin-top: var(--header-height);
