@@ -1,0 +1,49 @@
+/*--- reset --- */
+* {
+  margin: 0;
+  padding: 0%;
+  background: border-box;
+}
+/*--- variables and setups initials --- */
+
+:root {
+  font-size: 100%; /*16px*/
+  --hue: 159;
+  --color-title: hsl(var(--hue), 41%, 10%);
+  --color-primary: hsl(var(--hue), 36%, 57%);
+  --color-second: hsl(var(--hue), 365%, 88%);
+  --background1: hsl(0, 0%, 98%);
+  --background2: hsl(0, 0%, 100%);
+}
+img {
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+/*--- home --- */
+.logo {
+  color: var(--color-title);
+  font: 700 1.3125rem 'Poppins', sans-serif;
+}
+.logo span {
+  color: var(--color-primary);
+}
+header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+nav {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
