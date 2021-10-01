@@ -7,6 +7,7 @@
 /*--- variables and setups initials --- */
 
 :root {
+  --header-heigth: 4.5rem;
   font-size: 100%; /*16px*/
   --hue: 159;
   --color-title: hsl(var(--hue), 41%, 10%);
@@ -22,7 +23,11 @@ img {
 a {
   text-decoration: none;
 }
-/*--- home --- */
+
+body {
+  background-color: var(--background1);
+}
+/*--- HEADER ---*/
 .logo {
   color: var(--color-title);
   font: 700 1.3125rem 'Poppins', sans-serif;
@@ -31,9 +36,45 @@ a {
   color: var(--color-primary);
 }
 header {
+  /*border-bottom: 1px solid #e4e4e4;*/
+  display: flex;
+  height: var(--header-heigth);
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+  width: 100%;
 }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/*header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  position: fixed;
+}
+nav {
+  background-color: var(--background1);
+  usando o nav para pegar o box NAV
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+} */
+
+/*--- HOME --- */
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -42,8 +83,11 @@ img {
   width: 100%;
   height: auto;
 }
-nav {
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
+
+#Home {
+  margin-top: 2rem;
+  position: relative;
+}
+main {
+  margin-top: var(--header-height);
 }
