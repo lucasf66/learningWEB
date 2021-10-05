@@ -32,6 +32,17 @@ body {
 section {
   padding: 5rem 0;
 }
+
+.grid {
+  display: grid; /* SEPARA O BOX EM UMA GRADE */
+  gap: 2rem; /* ESPAÇO ENTRE AS JANELAS DA GRID */
+}
+.section {
+  padding: 5rem 0;
+}
+main {
+  margin-top: 4.5rem;
+}
 /*--- HEADER ---*/
 .logo {
   color: var(--color-title);
@@ -40,18 +51,20 @@ section {
 .logo span {
   color: var(--color-primary);
 }
+
 #initial_header {
   border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
   position: fixed;
-  z-index: 100;
+  z-index: 100%;
   background-color: var(--body-color);
   width: 100%;
+  top: 0;
+  left: 0;
 }
 
 nav {
   height: 4.5rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
   display: flex;
   align-items: center; /*pra usar o center terá que definir altura do propio box */
   justify-content: space-between;
@@ -76,27 +89,70 @@ nav {
 } */
 
 /*--- HOME --- */
+#Home {
+  overflow: hidden;
+}
 #home h1 {
   font: 700 1.875rem 'Poppins', sans-serif;
   color: hsla(0, 0%, 0%, 1);
-  display: flex;
-  justify-content: center;
 }
 .container {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin: 0 1.5rem 0 1.5rem; /*top,lef,bottom,rigth*/
 }
-img {
-  width: 100%;
-  height: auto;
+#Home .image {
   /*Faz com que se adapte a tela */
+  position: relative;
+  right: 2.93rem;
+}
+#Home .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--color-second);
+  position: absolute;
+  top: -16.8%;
+  left: 16.7%;
+  z-index: -1;
 }
 p {
   color: var(--colorfont-body);
 }
 
-#Home {
+#Home .container {
+  margin: 0;
+}
+#Home .text {
+  margin: 0 1.5rem 0 1.5rem;
+  text-align: center;
 }
 main {
   margin-top: var(--header-height);
+}
+#Home .text h1 {
+  margin-bottom: 1rem;
+}
+#Home .text p {
+  margin-bottom: 2rem;
+}
+.button {
+  background: var(--color-primary);
+  height: 3.5rem;
+  display: inline-flex; /*se ajusta o tamanho do conteudo e habilita o align*/
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  font: 500 1rem 'DM Sans', sans-serif;
+  color: #e4e4e4;
+  text-decoration: none;
+}
+.button:hover {
+  background: var(--color-second);
+}
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    #69b99d 0%,
+    rgba(204, 244, 230, 0.34) 100%
+  );
 }
