@@ -1,8 +1,5 @@
 Aprendendo HTML + CSS + JavaScript
 
-Fazendo um site instruido pelo RocketSeat
+_Curso em video - Gustavo Guanabara - Base/introdução_
 
-First Site !!!
-
--HEADER OK
-\*\*Problema na fixação
+_RocketSeat - Prática - Criação de Sites_
