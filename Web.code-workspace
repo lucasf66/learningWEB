@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../original/nlw"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "learningWEB"
+	}
+}
