@@ -1,0 +1,17 @@
+/* Cascating Stylesheet */
+h1 {
+  font-size: 1.5rem;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: grid;
+  place-items: center;
+  background-color: rgb(221, 178, 160);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
