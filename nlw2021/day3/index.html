@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lucas Ferreira - DoWhile 2021</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img src="images/build.svg" alt="Selo RocketSeat" />
+          </span>
+          <img src="images/profile.jpeg" alt="Profile" />
+        </div>
+        <h1 id="userName">Lucas Ferreira</h1>
+        <a
+          id="link github"
+          href="https://www.github.com/lucasf66"
+          target="_blank"
+        >
+          <img src="images/github.svg" alt="" />
+          lucasf66
+        </a>
+
+        <p>Estudante de Engenharia Elétrica e Desenvolvimento Web</p>
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="images/youtube.svg" alt="youtube" />
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="https://www.instagram.com/lucasf.66" target="_blank">
+              <img src="images/instagram.svg" alt="youtube" />
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="https://www.facebook.com/lucasf.66/" target="_blank">
+              <img src="images/facebook.svg" alt="youtube" />
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="https://www.twitter.com/zoun66" target="_blank"
+              ><img src="images/twitter.svg" alt="twitter"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script>
+      //variavies : let ou const
+      //let = alteravel e const = constante
+      const linksSocialMedia = {
+        github: 'teste',
+        facebook: 'lucasf.66',
+        instagram: 'lucasf.66',
+        linkedn: 'lucasf66',
+        twitter: 'teste',
+        youtube: 'CursoEmVideo'
+      }
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://www.${social}.com/${linksSocialMedia[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+      changeSocialMediaLinks()
+    </script>
+  </body>
+</html>
