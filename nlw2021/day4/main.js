@@ -22,10 +22,11 @@ function getGitHubProfileInfo() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      linkGitHub.href = data.url
-      userName.textContent = data.name
-      bio.textContent = data.bio
       profile.src = data.avatar_url
+      userName.textContent = data.name
+      loginGitHub.textContent = data.login
+      linkGitHub.href = data.html_url
+      bio.textContent = data.bio
       loginGitHub.textContent = data.login
     })
 }
